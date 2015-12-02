@@ -17,12 +17,7 @@
       <div data-role="content">
 
         <div data-role="fieldcontain">
-          <label for="name">Name:</label>
-          <textarea cols="40" rows="8" name="name" id="name"></textarea>
-        </div>
-
-        <div data-role="fieldcontain">
-          <label for="special-feature">Activate special feature:</label>
+          <label for="special-feature">Invert color:</label>
           <select name="special-feature" id="special-feature" data-role="slider">
             <option value="off">Off</option>
             <option value="on">On</option>
@@ -31,18 +26,18 @@
 
         <div data-role="fieldcontain">
           <fieldset data-role="controlgroup">
-            <legend>Choose as many snacks as you'd like:</legend>
+            <legend>Choose dot size:</legend>
             <input type="checkbox" name="checkbox-cheetos" id="checkbox-cheetos" class="custom" />
-            <label for="checkbox-cheetos">Cheetos</label>
+            <label for="checkbox-cheetos">3</label>
 
             <input type="checkbox" name="checkbox-doritos" id="checkbox-doritos" class="custom" />
-            <label for="checkbox-doritos">Doritos</label>
+            <label for="checkbox-doritos">5</label>
 
             <input type="checkbox" name="checkbox-fritos" id="checkbox-fritos" class="custom" />
-            <label for="checkbox-fritos">Fritos</label>
+            <label for="checkbox-fritos">7</label>
 
             <input type="checkbox" name="checkbox-sunchips" id="checkbox-sunchips" class="custom" />
-            <label for="checkbox-sunchips">Sun Chips</label>
+            <label for="checkbox-sunchips">9</label>
             </fieldset>
           </div>
         </div>
@@ -59,8 +54,6 @@
     <script>
       function saveOptions() {
         var options = {}
-        //Add all textual values
-        $('textarea, select, [type="hidden"], [type="password"], [type="text"]').each(function(){options[$(this).attr('id')] = $(this).val();})
         //Add all checkbox type values
         $('[type="radio"], [type="checkbox"]').each(function(){options[$(this).attr('id')] = $(this).is(':checked');})
         return options;
