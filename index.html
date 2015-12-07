@@ -31,8 +31,10 @@
       //Setup to allow easy adding more options later
       function saveOptions() {
         var invertSelect = document.getElementById("invert_select");
+        var SizeSelect = document.getElementById("Size_select");
         var options = {
           "invert": invertSelect.options[invertSelect.selectedIndex].value
+          "size": SizeSelect.options[invertSelect.selectedIndex].value
         }
         
         return options;
